@@ -1,0 +1,714 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poiret+One&family=Tenor+Sans&display=swap');
+
+:root {
+  --accent: ;
+  --text: #6e4f7c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.6;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-size: 25px;
+}
+
+html {
+  font-size: 25px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poiret One', serif;
+  position: relative;
+  z-index: 10;
+}
+
+h1 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+h2 {
+  max-width: 830px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.burger {
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 30px;
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 100;
+  display: none;
+}
+
+.line {
+  position: absolute;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+.line1 {
+  top: 0;
+  width: 60%;
+  left: 0;
+}
+
+.line2 {
+  top: 50%;
+  width: 100%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.line3 {
+  bottom: 0;
+  width: 80%;
+  right: 0;
+}
+
+.burger.active .line1 {
+  transform: rotate(45deg);
+  top: 50%;
+  left: 0;
+  width: 100%;
+}
+
+.burger.active .line2 {
+  opacity: 0;
+}
+
+.burger.active .line3 {
+  transform: rotate(-45deg);
+  bottom: auto;
+  top: 50%;
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+nav {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 15px;
+  background-repeat: no-repeat;
+  min-height: 100px;
+}
+
+header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: linear-gradient(
+      to bottom,
+      rgba(220, 175, 236, 0) 0%,
+      rgb(55, 26, 57) 100%
+    ),
+    url(./images/3.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.header-grid {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 100;
+}
+
+.header-text {
+  margin-right: -200px;
+  text-align: center;
+  background: linear-gradient(
+      to bottom,
+      rgba(220, 175, 236, 0) 0%,
+      rgb(55, 26, 57) 100%
+    ),
+    url(./images/photo_3.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 80vh;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  z-index: 10;
+  box-shadow: 30px 0px 181px 83px rgba(78, 57, 77, 0.9);
+}
+
+.header-img img {
+  height: 100vh;
+  box-shadow: 8px 0px 181px 33px rgba(255, 255, 255, 0.9);
+  background: linear-gradient(
+    to bottom,
+    rgba(220, 175, 236, 0) 0%,
+    rgb(55, 26, 57) 100%
+  );
+  object-fit: cover;
+}
+
+.logo {
+  color: #fff;
+  font-size: 3.5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: 'Poiret One', sans-serif;
+}
+
+.logo span {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  max-width: 700px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.logo em {
+  display: block;
+  font-size: 0.9rem;
+  max-width: 500px;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.6);
+}
+
+header ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.main-button {
+  color: var(--text);
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-shadow: 2px 2px 5px rgba(54, 15, 65, 0.4);
+  font-family: 'Poiret One', serif;
+  border-radius: 35px;
+  border: 1px solid #fff;
+  width: 350px;
+  padding: 5px 15px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3 ease;
+  cursor: pointer;
+}
+
+.main-button i {
+  margin-right: 15px;
+}
+
+.main-button.reverse {
+  color: #fff;
+  background-color: var(--text);
+  border-color: var(--text);
+}
+
+.main-button:hover {
+  color: #fff;
+  background-color: var(--text);
+}
+
+.main-button.reverse:hover {
+  color: var(--text);
+  background-color: #fff;
+  border-color: var(--text);
+}
+
+.header-grid .logo {
+  display: none;
+}
+
+#about {
+  background-image: url('./images/taroback.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 100px 30px;
+}
+
+#about .text {
+  position: relative;
+  background: linear-gradient(
+      to bottom,
+      rgba(220, 175, 236, 0) 0%,
+      rgb(55, 26, 57) 100%
+    ),
+    url(./images/15.png);
+  width: 600px;
+  background-size: cover;
+  color: #fff;
+  height: 100%;
+  border-radius: 35px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: -6px -3px 36px 39px rgba(207, 207, 207, 0.75);
+}
+
+#about .text p {
+  margin-bottom: 20px;
+}
+
+.about-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-grid img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 100%;
+  margin: 0 auto 40px;
+  box-shadow: -6px -3px 36px 39px rgba(207, 207, 207, 0.75);
+}
+
+#taro {
+  background: linear-gradient(
+      to top,
+      rgba(220, 175, 236, 0.4) 0%,
+      rgb(20, 11, 21) 100%
+    ),
+    url('images/back.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  width: 100%;
+  padding: 100px 30px;
+  height: max-content;
+  min-height: 100vh;
+  margin-top: 100px;
+  font-family: 'Poiret One', serif;
+  color: #fff;
+  position: relative;
+  z-index: 100;
+}
+
+#contacts .text-taro {
+  background: linear-gradient(
+      to top,
+      rgba(220, 175, 236, 0.4) 0%,
+      rgb(20, 11, 21) 100%
+    ),
+    url('images/back.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: auto;
+}
+
+#contacts .text-taro ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.text-taro {
+  background: linear-gradient(
+      to top rgba(220, 175, 236, 0) 0%,
+      rgb(20, 11, 21) 100%
+    ),
+    url('images/back.jpg') no-repeat center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 600px;
+  height: 600px;
+  border-radius: 100%;
+  padding: 25px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -6px -3px 36px 39px rgba(207, 207, 207, 0.75);
+}
+
+#taro h2 {
+  color: #fff;
+}
+
+#taro p {
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+}
+
+.text-taro p:last-child {
+  margin-bottom: 0;
+}
+
+#taro h3 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.taro-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  gap: 80px;
+  margin-top: 50px;
+}
+
+.info-taro p {
+  margin-bottom: 20px;
+}
+
+.taro-item {
+  font-size: 1.3rem;
+  max-width: 1300px;
+  margin: 50px auto 0;
+  font-family: 'Poiret One', serif;
+}
+
+.taro-item ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  gap: 60px;
+}
+
+.taro-item ul li {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(240, 231, 231, 0.8);
+  padding: 20px;
+  border-radius: 35px;
+  color: var(--text);
+  font-size: 1.4rem;
+  min-height: 7.5em;
+}
+
+.num-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  align-items: center;
+  margin: 100px auto 0;
+  padding: 15px;
+  max-width: 1200px;
+}
+
+.num-grid p {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.num-grid h2 {
+  margin-top: 50px;
+}
+
+.num-grid h2:first-child {
+  margin-top: 0;
+}
+
+.num-img img {
+  box-shadow: -6px -3px 36px 39px rgba(207, 207, 207, 0.75);
+  max-width: 650px;
+}
+
+.num-text ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poiret One', serif;
+}
+
+.num-text ul li {
+  margin-bottom: 20px;
+}
+
+#num .taro-item {
+  margin-top: 0;
+}
+
+#num .taro-item li {
+  box-shadow: -6px -3px 16px 19px rgba(207, 207, 207, 0.75);
+}
+
+#energy {
+  background: linear-gradient(
+      to top,
+      rgba(220, 175, 236, 0.4) 0%,
+      rgb(20, 11, 21) 100%
+    ),
+    url('images/energy.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  width: 100%;
+  padding: 100px 30px;
+  height: max-content;
+  min-height: 100vh;
+  margin-top: 100px;
+  font-family: 'Poiret One', serif;
+  color: #fff;
+  position: relative;
+  z-index: 100;
+}
+
+#energy h2 {
+  color: #fff;
+  font-size: 2.1rem;
+}
+
+#energy h3 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+#energy em {
+  color: #fff;
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.taro-img img {
+  object-fit: cover;
+  width: 600px;
+  height: 600px;
+  border-radius: 100%;
+  box-shadow: -6px -3px 36px 39px rgba(207, 207, 207, 0.75);
+}
+
+#energy p {
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+#contacts {
+  padding: 100px 30px;
+}
+
+@media (max-width: 1560px) {
+  .taro-grid {
+    display: grid;
+    grid-template-columns: 620px 1fr;
+  }
+  #energy .taro-grid {
+    grid-template-columns: 1fr 520px;
+  }
+  .taro-img img {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .logo {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  nav {
+    z-index: 2000;
+  }
+  .burger {
+    display: block;
+  }
+
+  .header-img {
+    display: none;
+  }
+  .header-text {
+    margin-right: auto;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    display: none;
+    background: linear-gradient(
+        to bottom,
+        rgba(220, 175, 236, 0) 0%,
+        rgb(55, 26, 57) 100%
+      ),
+      url(./images/photo_3.png);
+    background-size: cover;
+  }
+  nav .logo span,
+  nav .logo em {
+    display: none;
+  }
+
+  .active .header-text {
+    display: flex;
+  }
+  .header-grid .logo {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+  }
+  .header-grid .logo span {
+    font-size: 1.1rem;
+  }
+  header {
+    background: linear-gradient(
+        to bottom,
+        rgba(220, 175, 236, 0) 0%,
+        rgb(55, 26, 57) 100%
+      ),
+      url(./images/photo_3.png);
+    background-size: cover;
+  }
+  .active .header-grid .logo {
+    display: none;
+  }
+  h2,
+  #energy h2 {
+    font-size: 1.2rem;
+  }
+  section,
+  #about {
+    padding: 30px 15px;
+  }
+  .about-grid img {
+    width: 300px;
+    height: 300px;
+  }
+  #about .text {
+    width: 95%;
+    padding: 30px 15px;
+  }
+  #about {
+    position: relative;
+    background-image: none;
+  }
+  #about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    height: 100vw;
+    background-image: url('images/taroback.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(394deg);
+    transform-origin: top left;
+    z-index: 0;
+  }
+  .taro-grid,
+  .taro-item ul,
+  .num-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .taro-item ul {
+    gap: 30px;
+  }
+  #taro,
+  #energy {
+    padding: 30px;
+  }
+  .text-taro p,
+  h2 {
+    max-width: 90vw;
+  }
+  #taro h3,
+  #energy h3 {
+    font-size: 1.2rem;
+  }
+  .taro-item ul li {
+    min-height: 5.5em;
+    font-size: 1rem;
+  }
+
+  #contacts .text-taro ul {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+  }
+  .main-button {
+    max-width: 300px;
+  }
+  .num-grid {
+    margin: 30px 0;
+  }
+  #energy {
+    margin-top: 0;
+  }
+  #contacts {
+    padding: 30px 15px 0;
+  }
+}
